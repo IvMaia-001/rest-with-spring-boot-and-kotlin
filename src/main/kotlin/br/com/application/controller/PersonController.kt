@@ -1,6 +1,7 @@
 package br.com.application.controller
 
-import br.com.application.model.Person
+
+import br.com.application.data.vo.v1.PersonVO
 import br.com.application.services.PersonService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.MediaType
@@ -24,25 +25,25 @@ class PersonController {
 
 
     @GetMapping(produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun findAll(): List<Person> {
+    fun findAll(): List<PersonVO> {
         return service.findAll()
     }
 
     @GetMapping(value = ["/{id}"],
                     produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun findById(@PathVariable(value = "id") id : Long ) : Person {
-        return service.findByid(id)
+    fun findById(@PathVariable(value = "id") id : Long ) : PersonVO {
+        return service.findById(id)
     }
 
     @PostMapping(consumes = [MediaType.APPLICATION_JSON_VALUE],
                  produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun create(@RequestBody person: Person ) : Person {
+    fun create(@RequestBody person: PersonVO ) : PersonVO {
         return service.create(person)
     }
 
     @PutMapping(consumes = [MediaType.APPLICATION_JSON_VALUE],
                 produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun update(@RequestBody person: Person ) : Person {
+    fun update(@RequestBody person: PersonVO ) : PersonVO {
         return service.create(person)
     }
 

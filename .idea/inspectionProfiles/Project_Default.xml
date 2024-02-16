@@ -6,16 +6,22 @@
       <option name="ignoredModules">
         <list>
           <option value="rest-with-spring-boot-and-kotlin" />
+          <option value="rest-with-spring-boot-and-kotlin" />
+          <option value="rest-with-spring-boot-and-kotlin" />
         </list>
       </option>
       <option name="ignoredPackages">
         <list>
           <option value="com.jayway.jsonpath:json-path:2.8.0" />
+          <option value="commons-collections:commons-collections:3.2.2" />
+          <option value="commons-io:commons-io:2.5" />
         </list>
       </option>
       <option name="ignoredReasons">
         <list>
           <option value="In progress" />
+          <option value="Not exploitable" />
+          <option value="Not exploitable" />
         </list>
       </option>
     </inspection_tool>
