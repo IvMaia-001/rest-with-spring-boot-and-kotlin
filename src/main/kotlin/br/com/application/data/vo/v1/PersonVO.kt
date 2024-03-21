@@ -1,7 +1,5 @@
 package br.com.application.data.vo.v1
 
-
-
 data class PersonVO (
 
     var id: Long = 0,
